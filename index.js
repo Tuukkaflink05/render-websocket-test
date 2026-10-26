@@ -1,6 +1,7 @@
 let websocket = null;
 window.addEventListener("DOMContentLoaded", () => {
   websocket = new WebSocket("ws://localhost:10000/chat");
+  //websocket = new WebSocket("wss://websockets-echo-t90c.onrender.com/chat");
   receive(websocket);
   websocket.addEventListener("open", () => send(websocket));
 })
