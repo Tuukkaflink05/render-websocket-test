@@ -96,6 +96,7 @@ connections = []
 
 async def main():
     server = await serve(handler, "0.0.0.0", 10000,process_request=process_request)
+    print("server online")
     await server.serve_forever()
 
 
